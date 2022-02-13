@@ -1,273 +1,390 @@
-@font-face {
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: 400;
-    src: url("fonts/pt-sans-regular.woff2") format("woff2");
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: 700;
-    src: url("fonts/pt-sans-regular.woff2") format("woff2");
-    font-display: swap;
-}
-
-html {
-    height: 100%;
-}
-
-body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-    font-family: "PT Sans";
-    font-size: 16px;
-    line-height: 24px;
-    color: black;
-    background-color: white;
-}
-
-.main-container {
-    flex-grow: 1;
-}
-
-.First-screen {
-    background-size: 100% auto;
-    width: 1200px;
-    height: 485px;
-    background-image: url(/images/index-background.jpg);
-    background-repeat: no-repeat;
-}
-
-.logo-welcom {
-    display: block;
-    margin: 0 auto;
-}
-
-.city-description {
-    background: #FFFFFF;
-    width: 1200px;
-    height: 282px;
-    left: 40px;
-    top: 550px;
-    text-align: center;
-    font-family: inherit;
-}
-
-.page-header {
-    background: white;
-    color: black;
-}
-
-.page-container {
-    width: 1200px;
-    margin: 0 auto;
-}
-
-
-/*Навигация*/
-
-.navigation {
-    display: flex;
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 26px;
-    width: 1060px;
-    margin: 0 auto;
-}
-
-.navigation-link {
-    font-family: "PT Sans";
-    color: black;
-    background-color: white;
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 26px;
-    text-align: center;
-}
-
-.navigation-item {
-    display: inline-block;
-    left: 110px;
-    top: 0px;
-    padding: 5px;
-}
-
-.navigation-list {
-    width: 345px;
-    height: 66px;
-}
-
-.navigation-user {
-    width: 280px;
-    margin-left: auto;
-    display: flex;
-}
-
-.navigation-search {
-    background-image: url(/images/logo/search.svg);
-    background-repeat: no-repeat;
-}
-
-.navigation-favorites {
-    background-image: url(/images/logo/favorite.svg);
-    background-repeat: no-repeat;
-}
-
-.navigation-wants {
-    width: 160px;
-    height: 37px;
-    background: #756257;
-    border-radius: 4px;
-    display: flex;
-    text-align: center;
-    text-transform: uppercase;
-    display: block;
-    color: white;
-}
-
-
-/*list*/
-
-.advantages-list {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-align: center;
-}
-
-.advantages-item {
-    width: 400px;
-    height: 384px;
-}
-
-.index-columns {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 40px;
-}
-
-.services {
-    width: 1200px;
-    height: 417px;
-    text-align: center;
-    font-family: inherit;
-    background-color: white;
-}
-
-.subscribtion-proposal {
-    width: 1200px;
-    height: 411px;
-    background-image: url(/images/background.jpg);
-}
-
-.subscribtion-proposal-container {
-    display: block;
-    margin: 0 auto;
-    width: 800px;
-    height: 224px;
-    text-align: center;
-    color: white;
-    padding-top: 94px;
-    padding-right: 200px;
-    padding-left: 200px;
-    padding-bottom: 94px;
-}
-
-.Subscribe {
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 36px;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.subscribe-description {
-    font-family: PT Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 22px;
-    line-height: 26px;
-    text-align: center;
-}
-
-.subscribtion-field {
-    width: 600px;
-    height: 60px;
-    background: #F2F2F2;
-    border-radius: 10px 0px 0px 10px;
-}
-
-.button-button-subscribe {
-    width: 200px;
-    height: 60px;
-    background: #83B3D3;
-    border-radius: 0px 10px 10px 0px;
-}
-
-
-/*стили каталога*/
-
-.filter-catalog {
-    background-image: url(/images/background.jpg);
-    background-repeat: no-repeat;
-}
-
-.product-list {
-    width: 1058px;
-    height: 1040px;
-}
-
-.page-footer {
-    background: #FFFFFF;
-}
-
-.page-footer-container {
-    display: flex;
-    width: 1200px;
-    height: 120px;
-    margin: 0 auto;
-}
-
-.footer-contacts {
-    height: 720px;
-    left: 50px;
-    text-align: center;
-    margin: 0;
-}
-
-.Social-networks {
-    display: flex;
-    list-style-type: none;
-    width: 107px;
-    height: 18px;
-}
-
-.page-footer-title {
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 40px;
-    line-height: 40px;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.htmlacademy.ru {
-    width: 115px;
-    height: 34px;
-    margin-left: auto;
-}
+    @font-face {
+        font-family: "PT Sans";
+        font-style: normal;
+        font-weight: 400;
+        src: url("../fonts/ptsans-400.woff2") format("woff2");
+        font-display: swap;
+    }
+    
+    @font-face {
+        font-family: "PT Sans";
+        font-style: normal;
+        font-weight: 700;
+        src: url("../fonts/ptsans-700.woff2") format("woff2");
+        font-display: swap;
+    }
+    
+    html {
+        height: 100%;
+    }
+    
+    body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        font-family: "PT Sans";
+        font-size: 16px;
+        line-height: 24px;
+        color: black;
+        background-color: white;
+    }
+    
+    img {
+        display: block;
+    }
+    
+    .main-container {
+        flex-grow: 1;
+    }
+    /************стили первого блога Главной стр****************/
+    
+    .First-screen {
+        background-size: 100% auto;
+        width: 1200px;
+        height: 485px;
+        background-image: url(../images/index-background.jpg);
+        background-repeat: no-repeat;
+    }
+    /****************************/
+    /*************Стили для Логотипов***************/
+    
+    .logo-welcom {
+        display: block;
+        margin: 0 auto;
+    }
+    /*************Закончились Стили для Логотипов***************/
+    
+    .city-description {
+        background: #FFFFFF;
+        width: 1200px;
+        height: 282px;
+        text-align: center;
+        font-family: inherit;
+    }
+    
+    .page-header {
+        background: white;
+        color: black;
+    }
+    
+    .page-container {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    /****************************Навигация***********************/
+    
+    .navigation {
+        display: flex;
+        font-weight: bold;
+        width: 1060px;
+        margin: 0 auto;
+    }
+    
+    .navigation-link {
+        color: black;
+        background-color: white;
+        text-decoration: none;
+        text-align: center;
+    }
+    
+    .navigation-item {
+        display: inline-block;
+        left: 110px;
+        top: 0px;
+        padding: 5px;
+    }
+    
+    .navigation-list {
+        width: 345px;
+        height: 66px;
+    }
+    
+    .navigation-user {
+        width: 280px;
+        margin-left: auto;
+        display: flex;
+    }
+    
+    .navigation-search {
+        background-image: url(../images/logo/search.svg);
+        background-repeat: no-repeat;
+    }
+    
+    .navigation-favorites {
+        background-image: url(../images/logo/favorite.svg);
+        background-repeat: no-repeat;
+    }
+    
+    .navigation-wants {
+        display: inline-block;
+        min-width: 160px;
+        padding: 9px 18px;
+        font-family: "PT Sans";
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background: #756257;
+        border-radius: 4px;
+        text-decoration: none;
+    }
+    
+    .navigation-wants:hover,
+    .navigation-wants:visited {
+        color: #FFFFFF;
+    }
+    /****************конец навигации*********************/
+    /*****************************dvantages**********************/
+    
+    .advantages-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+    }
+    
+    .advantages-item {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        height: 384px;
+        align-items: center;
+        justify-content: center;
+        background: white
+    }
+    
+    .advantages-item:nth-child(3) {
+        background-color: rgba(131, 179, 211, 0.12);
+    }
+    
+    .advantages-item:nth-child(5) {
+        background-color: rgba(131, 179, 211, 0.12);
+    }
+    
+    .advantages-item:nth-child(8) {
+        background-color: rgba(131, 179, 211, 0.12);
+    }
+    
+    .advantages-item:nth-child(10) {
+        background-color: rgba(131, 179, 211, 0.12);
+    }
+    
+    .advantages-item:nth-child(1) {
+        background: #83B3D3;
+    }
+    
+    .advantages-item:nth-child(7) {
+        background: #83B3D3;
+    }
+    
+    .advantages-item:nth-child(9) {
+        background: rgba(131, 179, 211, 0.2);
+    }
+    /*****************************конец dvantages**********************/
+    
+    .services {
+        width: 1200px;
+        height: 417px;
+        text-align: center;
+        font-family: inherit;
+        background-color: white;
+    }
+    
+    .subscribtion-proposal {
+        width: 1200px;
+        height: 411px;
+        background-image: url(/images/background.jpg);
+    }
+    
+    .subscribtion-proposal-container {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        width: 800px;
+        height: 224px;
+        text-align: center;
+        color: white;
+        padding-top: 94px;
+        padding-right: 200px;
+        padding-left: 200px;
+        padding-bottom: 94px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .Subscribe {
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    .subscribe-description {
+        text-align: center;
+    }
+    
+    .email-subscription {
+        position: relative;
+        width: 600px;
+    }
+    
+    .subscribtion-email {
+        display: none;
+    }
+    
+    .subscribe-action {
+        font-family: "PT Sans";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 26px;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+    
+    .subscribtion-field {
+        width: px;
+        height: 60px;
+        background: #F2F2F2;
+        border-radius: 10px 0px 0px 10px;
+        padding-left: 20px;
+        padding-right: 150px;
+        box-sizing: border-box;
+    }
+    
+    .button-button-subscribe {
+        position: absolute;
+        right: 0px;
+        width: 200px;
+        height: 60px;
+        background: #83B3D3;
+        border-radius: 0px 10px 10px 0px;
+        color: #FFFFFF;
+    }
+    
+    .product-list {
+        width: 1058px;
+        height: 1040px;
+    }
+    
+    .page-footer {
+        background: #FFFFFF;
+    }
+    
+    .page-footer-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 1200px;
+        margin: 0 auto;
+        padding: 40px 0;
+    }
+    
+    .footer-contacts {
+        margin: 0;
+        font-family: "PT Sans";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 40px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    .social-networks {
+        display: flex;
+        list-style-type: none;
+        width: 107px;
+        height: 18px;
+    }
+    
+    .social-networks li {
+        margin-left: 30px;
+    }
+    
+    li:last-child {
+        margin-right: 0;
+    }
+    
+    .page-footer-title {
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    .htmlacademy.ru {
+        width: 115px;
+        height: 34px;
+        margin-left: auto;
+    }
+    /*стили каталога*/
+    
+    .filter-catalog {
+        width: 1200px;
+        height: 408px;
+        background-image: url(../images/background.jpg);
+        background-repeat: no-repeat;
+    }
+    
+    .product-list {
+        display: flex;
+    }
+    
+    .product-card {
+        width: 339px;
+        height: 438px;
+    }
+    
+    .wrapper-catalog-button-load-more {
+        width: 1056px;
+        height: 120px;
+    }
+    
+    .section-button-load-more {
+        position: absolute;
+        width: 620px;
+        height: 60px;
+        background: #83B3D3;
+        border-radius: 4px;
+    }
+    
+    .button-load-more {
+        font-family: "PT Sans";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 26px;
+        display: inline-block;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+    
+    .subscribtion-proposal-catalog {
+        width: 1200px;
+        height: 411px;
+        background-color: white;
+    }
+    
+    .subscribtion-proposal-container-catalog {
+        color: black;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        width: 800px;
+        height: 224px;
+        text-align: center;
+        padding-top: 94px;
+        padding-right: 200px;
+        padding-left: 200px;
+        padding-bottom: 94px;
+        flex-direction: column;
+        justify-content: center;
+    }
