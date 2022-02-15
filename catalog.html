@@ -10,9 +10,6 @@
 </head>
 
 <body>
-
-
-
     <header class="page-header">
         <nav class="navigation">
             <img class="body-logo" src="images/logo/logo-sedona.svg" width="139" height="70" alt="Логотип «Города Седона»">
@@ -22,7 +19,7 @@
                     <a class="navigation-link" href="index.html">Главная</a>
                 </li>
                 <li class="navigation-item">
-                    <a class="navigation-link" href="about-us">О Седоне</a>
+                    <a class="navigation-link" href="#">О Седоне</a>
                 </li>
                 <li class="navigation-item">
                     <a class="navigation-link" href="catalog.html">Гостиницы</a>
@@ -30,12 +27,10 @@
             </ul>
             <ul class="navigation-user">
                 <li class="navigation-item">
-                    <a class="navigation-link navigation-search" href="#"><span class="visually-hidden-search">Поиск</span>
-                    </a>
+                    <a class="navigation-link navigation-search" href="#"><span class="visually-hidden">Поиск</span></a>
                 </li>
                 <li class="navigation-item">
-                    <a class="navigation-link navigation-favorites" href="#"><span Class="visually-hidden">Избранное</span>
-                    </a>
+                    <a class="navigation-link navigation-favorites" href="#"><span class="visually-hidden">Избранное</span></a>
                 </li>
                 <li class="navigation-item">
                     <a class="navigation-link navigation-wants" href="#">Хочу сюда!</a>
@@ -43,7 +38,6 @@
             </ul>
         </nav>
     </header>
-
 
     <main class="main-catalog">
         <div class="page-container">
@@ -55,13 +49,7 @@
                         <a class="navigation-logo" href="#">Гостиницы</a>
                     </li>
                 </ul>
-
-
-
-
                 <p class="catalog-item">Инфраструктура</p>
-
-
                 <p><input type="checkbox" name="a" checked> Бассейн</p>
                 <p><input type="checkbox" name="a" checked> Парковка</p>
                 <p><input type="checkbox" name="a">Wi-Fi</p>
@@ -71,29 +59,26 @@
                 <p><input name="dzen" type="radio" value="dzen">Мотель</p>
                 <p><input name="dzen" type="radio" value="nedzen">Аппартаменты</p>
 
-
-                <p class="visually-hidden">Цены</p>
-                <label for="price-range">Стоимость,р:</label>
-                <input type="text" name="from">
-                <input type="text" name="to">
-                <input type="range" name="price-range" id="price-range" min="0" max="10000" step="1">9000
-                <a class="button button-apply" href="#">Применить</a>
-                <a class="button button-reset" href="#">Сбросить</a>
-
+                <div class="price-range-page">
+                    <p class="visually-hidden">Цены</p>
+                    <label for="price-range">Стоимость,₽:</label>
+                    <input type="text" name="from">
+                    <input type="text" name="to">
+                    <input type="range" name="price-range" id="price-range" min="0" max="10000" step="1">9000
+                    <a class="button button-apply" href="#">Применить</a>
+                    <a class="button button-reset" href="#">Сбросить</a>
+                </div>
             </section>
 
-            <p>Найдено страниц:38</p>
-
-            <form>
+            <form class="sorting">
+                <p class="pages-found">Найдено страниц:38</p>
                 <select class="select-control" aria-label="Сортировка">
-                <option value="cheap">Сначала дешёвые</option>
-            </select>
+                <option value="cheap">Сначала дешёвые</option></select>
             </form>
-
 
             <ul class="product-list">
                 <li class="product-card">
-                    <a class="product-card-link" href="product.html">
+                    <a class="product-card-link" href="#">
                         <img class="product-card-img" src="/images/hotel-1.jpg" width="299" height="206" alt="Первая гостинница">
                         <h3 class="product-card-title">Amara Resort & Spa Гостиница</h3>
                     </a>
@@ -105,7 +90,7 @@
                 </li>
 
                 <li class="product-card">
-                    <a class="product-card-link" href="product.html">
+                    <a class="product-card-link" href="#">
                         <img class="product-card-img" src="/images/hotel-2.jpg" width="299" height="206" alt="Вторая гостинница">
                         <h3 class="product-card-title">Desert Quail Inn Гостиница</h3>
                     </a>
@@ -117,7 +102,7 @@
                 </li>
 
                 <li class="product-card">
-                    <a class="product-card-link" href="product.html">
+                    <a class="product-card-link" href="#">
                         <img class="product-card-img" src="/images/hotel-3.jpg" width="299" height="206" alt="Третья гостинница">
                         <h3 class="product-card-title">Villas at Poco Diablo Гостиница</h3>
                     </a>
@@ -129,7 +114,7 @@
                 </li>
 
                 <li class="product-card">
-                    <a class="product-card-link" href="product.html">
+                    <a class="product-card-link" href="#">
                         <img class="product-card-img" src="/images/hotel-4.jpg" width="299" height="206" alt="Четвертая гостинница">
                         <h3 class="product-card-title">GreenTree Inn Гостиница</h3>
                     </a>
@@ -144,7 +129,7 @@
 
             <div class="wrapper-catalog-button-load-more">
                 <section class="section-button-load-more">
-                    <a class="button-load-more" type="submit">Загрузить еще</a>
+                    <h3 class="button-load-more">Загрузить еще</h3>
                 </section>
             </div>
 
@@ -152,12 +137,10 @@
                 <div class="subscribtion-proposal-container-catalog">
                     <h2 class="Subscribe">Подпишитесь на рассылку</h2>
                     <p class="subscribe-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
-                    <form class="email-subscription" action="https://google.com/" method="post">
+                    <form class="email-subscription" action="#" method="post">
                         <label for="subscribtion-email">E-mail</label>
                         <input class="subscribtion-field" placeholder="E-mail" type="email" name="subscribtion-email" id="subscribtion-email" required>
-                        <button class="button-button-subscribe" type="submit">
-                <span class="subscribe-action">Подписаться</span>
-            </button>
+                        <button class="button-button-subscribe" type="submit"><span class="subscribe-action">Подписаться</span></button>
                     </form>
                 </div>
             </section>
@@ -188,7 +171,7 @@
 
         </div>
     </footer>
-    </div>
+
 </body>
 
 </html>
