@@ -38,7 +38,7 @@ img {
     flex-grow: 1;
 }
 
-visually-hidden {
+.visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -118,22 +118,33 @@ visually-hidden {
 .navigation-list {
     width: 345px;
     height: 66px;
+    display: flex;
+    align-items: center;
 }
 
 .navigation-user {
     width: 280px;
     margin-left: auto;
     display: flex;
+    align-items: center;
 }
 
 .navigation-search {
     background-image: url(../images/logo/search.svg);
     background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    margin-right: 12px;
 }
 
 .navigation-favorites {
     background-image: url(../images/logo/favorite.svg);
     background-repeat: no-repeat;
+    width: 19px;
+    height: 17px;
+    display: flex;
+    margin-right: 32px;
 }
 
 .navigation-wants {
@@ -220,6 +231,46 @@ visually-hidden {
     text-align: center;
     font-family: inherit;
     background-color: white;
+}
+
+.services-name {
+    margin-top: 91px;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.services-info {
+    margin-top: 15px;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: #333333;
+}
+
+.services-link-button-container {
+    width: 575px;
+    height: 60px;
+    display: inline-block;
+    margin-top: 65px;
+}
+
+.services-link-button {
+    width: 575px;
+    height: 100%;
+    display: inline-block;
+    background: #756257;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 36px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-top: 15px;
 }
 
 .subscribtion-proposal {
