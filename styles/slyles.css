@@ -38,7 +38,7 @@ img {
     flex-grow: 1;
 }
 
-.visually-hidden {
+visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -257,7 +257,7 @@ img {
 
 .email-subscription {
     position: relative;
-    width: 600px;
+    width: 100%;
 }
 
 .subscribtion-email {
