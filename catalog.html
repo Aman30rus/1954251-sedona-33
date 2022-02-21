@@ -30,7 +30,9 @@
                     <a class="navigation-link navigation-search" href="#"><span class="visually-hidden">Поиск</span></a>
                 </li>
                 <li class="navigation-item">
-                    <a class="navigation-link navigation-favorites" href="#"><span class="visually-hidden">Избранное</span></a>
+                    <a class="navigation-link navigation-favorites" href="#"><span class="visually-hidden">Избранное</span>
+                        <div class="favorite-element">12</div>
+                    </a>
                 </li>
                 <li class="navigation-item">
                     <a class="navigation-link navigation-wants" href="#">Хочу сюда!</a>
@@ -43,30 +45,38 @@
         <div class="page-container">
 
             <section class="filter-catalog">
-                <h1 class="visually-hidden">Гостиницы Седоны</h1>
-                <ul class="breadcrumbs">
-                    <li class="breadcrumbs-item">
-                        <a class="navigation-logo" href="#">Гостиницы</a>
-                    </li>
-                </ul>
-                <p class="catalog-item">Инфраструктура</p>
-                <p><input type="checkbox" name="a" checked> Бассейн</p>
-                <p><input type="checkbox" name="a" checked> Парковка</p>
-                <p><input type="checkbox" name="a">Wi-Fi</p>
-
-                <p class="housing type">Тип жилья</p>
-                <p><input name="dzen" type="radio" value="pdzen" checked>Гостиница</p>
-                <p><input name="dzen" type="radio" value="dzen">Мотель</p>
-                <p><input name="dzen" type="radio" value="nedzen">Аппартаменты</p>
-
-                <div class="price-range-page">
-                    <p class="visually-hidden">Цены</p>
-                    <label for="price-range">Стоимость,₽:</label>
-                    <input type="text" name="from">
-                    <input type="text" name="to">
-                    <input type="range" name="price-range" id="price-range" min="0" max="10000" step="1">9000
-                    <a class="button button-apply" href="#">Применить</a>
-                    <a class="button button-reset" href="#">Сбросить</a>
+                <div class="wrapper-catalog">
+                    <h1 class="catalog-title">Гостиницы Седоны</h1>
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs-item">
+                            <li class="group"></li>
+                            <li class="navigation-logo">Гостиницы</li>
+                    </ul>
+                    <div class="infrastructure-ctalog">
+                        <div class="infrastructure-column">
+                            <p class="catalog-item">Инфраструктура</p>
+                            <p><input type="checkbox" name="a" checked> Бассейн</p>
+                            <p><input type="checkbox" name="a" checked> Парковка</p>
+                            <p><input type="checkbox" name="a">Wi-Fi</p>
+                        </div>
+                        <div class="housing-column">
+                            <p class="housing-type">Тип жилья</p>
+                            <p><input name="dzen" type="radio" value="pdzen" checked>Гостиница</p>
+                            <p><input name="dzen" type="radio" value="dzen">Мотель</p>
+                            <p><input name="dzen" type="radio" value="nedzen">Аппартаменты</p>
+                        </div>
+                        <div class="price-range-page">
+                            <p class="visually-hidden">Цены</p>
+                            <p class="price-range">Стоимость, ₽:</p>
+                            <input type="text" name="from">
+                            <input type="text" name="to">
+                            <input type="range" name="price-range" id="price-range" min="0" max="10000" step="1">9000
+                        </div>
+                        <div class="filter-buttons">
+                            <a class="button button-apply" href="#">Применить</a>
+                            <a class="button button-reset" href="#">Сбросить</a>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -74,6 +84,11 @@
                 <p class="pages-found">Найдено страниц:38</p>
                 <select class="select-control" aria-label="Сортировка">
                 <option value="cheap">Сначала дешёвые</option></select>
+                <div class="sort-buttons">
+                    <button class="sort-button-active"></button>
+                    <button class="sort-button-center"></button>
+                    <button class="sort-button-right"></button>
+                </div>
             </form>
 
             <ul class="product-list">
@@ -132,6 +147,23 @@
                     <h3 class="button-load-more">Загрузить еще</h3>
                 </section>
             </div>
+
+            <div class="pagination">
+                <a class="active" href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">...</a>
+                <a href="#">10</a>
+                <div class="pagination-info">
+                    <p class="pages-found-pagination">Гостиниц на странице:</p>
+                    <form class="sorting-pagination">
+                        <select class="select-control" aria-label="Сортировка">
+                        <option value="cheap">4</option></select>
+                    </form>
+                </div>
+            </div>
+
 
             <section class="subscribtion-proposal-catalog">
                 <div class="subscribtion-proposal-container-catalog">

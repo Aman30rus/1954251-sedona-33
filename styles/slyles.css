@@ -34,6 +34,10 @@ img {
     display: block;
 }
 
+label {
+    display: none;
+}
+
 .main-container {
     flex-grow: 1;
 }
@@ -58,6 +62,21 @@ img {
     height: 485px;
     background-image: url(../images/index-background.jpg);
     background-repeat: no-repeat;
+    padding-top: 51px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.first-screen:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 57px;
+    background: url(../images/divider2.svg) no-repeat center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
 }
 
 
@@ -67,7 +86,8 @@ img {
 /*************Стили для Логотипов***************/
 
 .logo-welcom {
-    display: block;
+    display: flex;
+    margin-top: 51px;
     margin: 0 auto;
 }
 
@@ -80,6 +100,7 @@ img {
     height: 282px;
     text-align: center;
     font-family: inherit;
+    margin-top: 63px;
 }
 
 .page-header {
@@ -93,12 +114,13 @@ img {
 }
 
 
-/****************************Навигация***********************/
+/****************************Навигация главной страницы***********************/
 
 .navigation {
     display: flex;
     font-weight: bold;
     width: 1060px;
+    height: 70px;
     margin: 0 auto;
 }
 
@@ -119,7 +141,10 @@ img {
     width: 345px;
     height: 66px;
     display: flex;
-    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    color: #000000;
 }
 
 .navigation-user {
@@ -145,6 +170,7 @@ img {
     height: 17px;
     display: flex;
     margin-right: 32px;
+    position: relative;
 }
 
 .navigation-wants {
@@ -168,8 +194,29 @@ img {
     color: #FFFFFF;
 }
 
+.favorite-element {
+    display: flex;
+    background: #7DB54F;
+    width: 20px;
+    height: 20px;
+    left: calc(50% - 19.05px/2 + 13px);
+    top: calc(50% - 13px/2 - 9px);
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 100%;
+    position: absolute;
+    justify-content: center;
+}
 
-/****************конец навигации*********************/
+
+/****************конец навигации главной стр*********************/
 
 
 /*****************************dvantages**********************/
@@ -184,6 +231,14 @@ img {
     text-align: center;
 }
 
+.advantages-description {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #333333;
+    margin-top: 31px;
+}
+
 .advantages-item {
     display: flex;
     flex-direction: column;
@@ -193,6 +248,9 @@ img {
     justify-content: center;
     background: white
 }
+
+
+/***************цвета преимуществ****************/
 
 .advantages-item:nth-child(3) {
     background-color: rgba(131, 179, 211, 0.12);
@@ -225,12 +283,16 @@ img {
 
 /*****************************конец dvantages**********************/
 
+
+/*****************************начало services**********************/
+
 .services {
     width: 1200px;
     height: 417px;
     text-align: center;
     font-family: inherit;
     background-color: white;
+    overflow: hidden;
 }
 
 .services-name {
@@ -273,6 +335,12 @@ img {
     padding-top: 15px;
 }
 
+
+/*****************************конец services**********************/
+
+
+/*****************************начало subscribtion**********************/
+
 .subscribtion-proposal {
     width: 1200px;
     height: 411px;
@@ -304,15 +372,13 @@ img {
 
 .subscribe-description {
     text-align: center;
+    font-size: 22px;
+    line-height: 26px;
 }
 
 .email-subscription {
     position: relative;
     width: 100%;
-}
-
-.subscribtion-email {
-    display: none;
 }
 
 .subscribe-action {
@@ -333,22 +399,37 @@ img {
     padding-left: 20px;
     padding-right: 150px;
     box-sizing: border-box;
+    margin-right: 200px;
+    border: 0;
 }
+
+
+/*****************************конец subscribtion**********************/
+
+
+/******************кнопка ПОДПИСАТЬСЯ**************/
 
 .button-button-subscribe {
     position: absolute;
-    right: 0px;
+    right: 10px;
     width: 200px;
     height: 60px;
     background: #83B3D3;
     border-radius: 0px 10px 10px 0px;
     color: #FFFFFF;
+    border: 0;
 }
+
+
+/*****************************************************/
 
 .product-list {
     width: 1058px;
     height: 1040px;
 }
+
+
+/***********ПОДВАЛ*********/
 
 .page-footer {
     background: #FFFFFF;
@@ -385,11 +466,6 @@ li:last-child {
     margin-right: 0;
 }
 
-.page-footer-title {
-    text-align: center;
-    text-transform: uppercase;
-}
-
 .htmlacademy.ru {
     width: 115px;
     height: 34px;
@@ -397,13 +473,108 @@ li:last-child {
 }
 
 
-/*стили каталога*/
+/*****************************СТИЛИ КАТАЛОГА*************************/
+
+.navigation-logo {
+    width: 73px;
+    height: 21px;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-top: px;
+    margin-left: 10px;
+}
+
+.wrapper-catalog {
+    margin: 35px 72px 83px 71px;
+}
+
+.breadcrumbs {
+    display: flex;
+    list-style: none;
+    margin-top: 5px;
+    align-items: center;
+    padding: 0;
+}
+
+.group {
+    width: 5px;
+    height: 8px;
+    background-image: url(../images/logo/group.svg);
+    margin-left: 11px;
+}
+
+.breadcrumbs-item {
+    width: 12px;
+    height: 12px;
+    background-image: url(../images/logo/home.svg);
+}
+
+.infrastructure-ctalog {
+    display: flex;
+}
+
+.infrastructure-column {
+    flex-direction: column;
+}
+
+.housing-type {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+
+.housing-column {
+    flex-direction: column;
+    margin-left: 67px;
+}
+
+.catalog-item {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+
+.catalog-title {
+    width: 528px;
+    height: 68px;
+    color: white;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 78px;
+    margin-top: 35px;
+    margin-bottom: 0;
+}
+
+.price-range-page {
+    display: flex;
+    flex-direction: column;
+    margin-left: 167px;
+}
+
+.price-range {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-left: 81px;
+}
 
 .filter-catalog {
     width: 1200px;
     height: 408px;
-    background-image: url(../images/background.jpg);
+    background-image: url(../images/catalog-background\ 1.jpg);
     background-repeat: no-repeat;
+    overflow: hidden;
+    color: #FFFFFF;
 }
 
 .product-list {
@@ -412,6 +583,7 @@ li:last-child {
     flex-wrap: wrap;
     width: 1058px;
     height: 1040px;
+    margin-left: 81px;
 }
 
 .product-card {
@@ -472,6 +644,19 @@ li:last-child {
     width: 1057px;
     height: 48px;
     display: flex;
+    align-items: center;
+    margin-top: 44px;
+    margin-bottom: 53px;
+    justify-content: space-between;
+    margin-left: 71px;
+}
+
+.select-control {
+    width: 168px;
+    height: 48px;
+    border: 2px solid #E6E6E6;
+    box-sizing: border-box;
+    border-radius: 4px;
 }
 
 .pages-found {
@@ -484,4 +669,130 @@ li:last-child {
     text-transform: uppercase;
     /* basic/black */
     color: #000000;
+}
+
+.cheap {
+    width: 287px;
+    height: 48px;
+}
+
+.pagination {
+    display: flex;
+    width: 1056px;
+    height: 55px;
+    margin-left: 83px;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+.pagination a {
+    width: 55px;
+    height: 55px;
+    text-decoration: none;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+    margin-right: 8px;
+    font-size: 20px;
+    line-height: 26px;
+    background: #83B3D3;
+    color: #FFFFFF;
+}
+
+.pagination a:nth-child(1) {
+    background: #F2F2F2;
+    color: #000000;
+}
+
+.button-apply {
+    width: 160px;
+    height: 48px;
+    background: #83B3D3;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.button-reset {
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.pagination-info {
+    width: 368px;
+    height: 48px;
+    margin-right: 0;
+    align-items: center;
+    width: 368px;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 299px;
+}
+
+.pages-found-pagination {
+    width: 175px;
+    height: 23px;
+    font-size: 18px;
+    line-height: 23px;
+    color: #333333;
+}
+
+
+/***********кнопки сортировки************/
+
+.sort-button-active {
+    width: 48px;
+    height: 48px;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: #FFFFFF;
+    background-image: url(../images/logo/mode-tile\ 1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.sort-button-center {
+    width: 48px;
+    height: 48px;
+    border: 2px solid #E6E6E6;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: #FFFFFF;
+    background-image: url(../images/logo/mode-slideshow\ 1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.sort-button-right {
+    width: 48px;
+    height: 48px;
+    border: 2px solid #E6E6E6;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: #FFFFFF;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/logo/mode-list\ 1.svg);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.sort-buttons {
+    gap: 8px;
 }
