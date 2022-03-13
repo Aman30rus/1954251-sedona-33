@@ -12,33 +12,35 @@
 <body>
 
     <header class="page-header">
-        <nav class="navigation">
-            <img class="body-logo" src="../images/logo/logo-sedona.svg" width="139" height="70" alt="Логотип «Города Седона»">
-            <ul class="navigation-list">
-                <li class="navigation-item">
-                    <a class="navigation-link" href="main-page.html">Главная</a>
-                </li>
-                <li class="navigation-item">
-                    <a class="navigation-link" href="about-us">О Седоне</a>
-                </li>
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-link-current " href="catalog.html">Гостиницы</a>
-                </li>
-            </ul>
-            <ul class="navigation-user">
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-search" href="#"><span class="visually-hidden">Поиск</span></a>
-                </li>
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-favorites" href="#"><span class="visually-hidden">Избранное</span>
+        <div class="page-container">
+            <nav class="navigation">
+                <img class="body-logo" src="../images/logo/logo-sedona.svg" width="139" height="70" alt="Логотип «Города Седона»">
+                <ul class="navigation-list">
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="main-page.html">Главная</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="about-us">О Седоне</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link navigation-link-current " href="catalog.html">Гостиницы</a>
+                    </li>
+                </ul>
+                <ul class="navigation-user">
+                    <li class="navigation-item">
+                        <a class="navigation-link navigation-search" href="#"><span class="visually-hidden">Поиск</span></a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link navigation-favorites" href="#"><span class="visually-hidden">Избранное</span>
                         <div class="favorite-element">12</div>
                     </a>
-                </li>
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-wants" href="#">Хочу сюда!</a>
-                </li>
-            </ul>
-        </nav>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link navigation-wants" href="#">Хочу сюда!</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main class="main-container main-index">
@@ -120,10 +122,10 @@
 
             <section class="subscribtion-proposal">
                 <div class="subscribtion-proposal-container">
-                    <h2 class="Subscribe">Подпишитесь на рассылку</h2>
+                    <h2 class="subscribe">Подпишитесь на рассылку</h2>
                     <p class="subscribe-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
                     <form class="email-subscription" action="#" method="post">
-                        <label for="subscribtion-email">E-mail</label>
+                        <label class="label-email" for="subscribtion-email">E-mail</label>
                         <input class="subscribtion-field" placeholder="E-mail" type="email" name="subscribtion-email" id="subscribtion-email" required>
                         <button class="button-button-subscribe" type="submit"><span class="subscribe-action">Подписаться</span></button>
                     </form>
@@ -157,6 +159,97 @@
 
         </div>
     </footer>
+
+    <!-- Модалка-->
+    <div class="modal-container modal-container-close">
+        <div class="modal modal-auth">
+            <section class="modal-content">
+                <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+            </section>
+            <button class="modal-close-button">
+        <svg class="modal-cross" width="20" height="19" role="img" aria-labelledby="cross" focusable="false"  fill="currentColor">
+          <title id="cross-x">Закрыть</title>
+           <use href="sprite.svg#cross-x"></use>
+       </svg>
+      </button>
+            <form class="appointment-form" action="https://echo.htmlacademy.ru/" method="post">
+                <div class="arrival-date">
+                    <p class="appointment-date"> <label for="appointment-date">Дата заезда:</label></p>
+
+                    <div> <input class="dates" type="text" name="appointment-date" id="appointment-date" value="27 апреля 2020">
+                        <svg class="calendar" width="15" height="15" role="img" aria-labelledby="calendar" focusable="false" fill="currentColor">
+          <title id="calendar">календарь</title>
+           <use href="sprite.svg#calendar"></use>
+       </svg></div>
+                    <p class="comments">Мы не можем отправить вас в прошлое.</p>
+                </div>
+
+
+
+
+                <div class="arrival-date">
+                    <p class="appointment-date"> <label for="appointment-date">Дата выезда:</label></p>
+                    <input class="dates" type="text" name="appointment-date" id="appointment-date" value="1 сентября 2021">
+                    <svg class="calendar" width="15" height="15" role="img" aria-labelledby="calendar" focusable="false" fill="currentColor">
+            <title id="calendar">календарь</title>
+             <use href="sprite.svg#calendar"></use>
+         </svg></div>
+                <p class="comments">На эти даты есть свободные номера. Пока есть.</p>
+
+
+                <div class="people">
+                    <div class="people-adults">
+                        <p> <label for="appointment-date-adults">Взрослые:</label></p>
+                    </div>
+                    <div class="people-young">
+                        <input class="number-of-people" type="text" name="appointment-date" id="appointment-date" value="2">
+                        <button class="button-minus"><svg class="minus" width="13" height="1" role="img" aria-labelledby="minus" focusable="false"  fill="currentColor">
+              <title id="minus">Минус</title>
+               <use href="sprite.svg#minus"></use>
+             </svg> </button>
+                        <button class="button-plus"> <svg class="plus" width="13" height="13" role="img" aria-labelledby="plus" focusable="false"  fill="currentColor">
+              <title id="plus">Плюс</title>
+               <use href="sprite.svg#plus"> </use>
+             </svg>
+            </button>
+                    </div>
+
+                    <div class="people-young">
+
+                        <p>
+                            <span class=""><label for="appointment-date">Дети: </label> 
+                 <span class="tooltip">
+                   <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                     <svg class="information tooltip-icon" width="1" height="9" role="img" aria-labelledby="info" focusable="false"  fill="currentColor">
+                     
+                     <use href="sprite.svg#info"></use></svg>
+                   </button>
+                   <span class="tooltip-text" class="tooltip-text" role="tooltip" >Укажите количество детей, <br>которые будут с вами, возраст <br>которых от 6 до 18 лет. Дети<br>
+                    до 6 лет размещаются<br> бесплатно.
+                   </span>
+                            </span>
+                            </span>
+                    </div>
+
+
+
+                    <div class="number">
+                        <input class="number-of-people" type="text" name="appointment-date" id="appointment-date" value="1">
+                        <button class="button-minus"><svg class="minus" width="13" height="1" role="img" aria-labelledby="minus" focusable="false"  fill="currentColor">
+            <title id="minus">Минус</title>
+             <use href="sprite.svg#minus"></use>
+           </svg> </button>
+                        <button class="button-plus"> <svg class="plus" width="13" height="13" role="img" aria-labelledby="plus" focusable="false"  fill="currentColor">
+            <title id="plus">Плюс</title>
+             <use href="sprite.svg#plus"> </use>
+           </svg>
+          </button>
+                    </div>
+                    </p>
+
+                </div>
+                <button class="button-modal" type="submit">Найти</button>
+            </form>
 
 
 </body>
