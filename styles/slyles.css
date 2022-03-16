@@ -27,15 +27,18 @@ body {
     font-size: 16px;
     line-height: 24px;
     color: black;
-    background-color: white;
+    background-color: #E5E5E5;
+}
+
+.shadow {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    width: 1200px;
+    margin: 0 auto;
 }
 
 img {
     display: block;
-}
-
-label.label-email {
-    display: none;
 }
 
 .main-container {
@@ -342,13 +345,13 @@ label.label-email {
 
 /*****************************начало subscribtion**********************/
 
-.subscribtion-proposal {
+.mountain {
     width: 1200px;
     height: 411px;
     background-image: url(../images/background.jpg);
 }
 
-.subscribtion-proposal-container {
+.subscribtion {
     position: relative;
     display: flex;
     margin: 0 auto;
@@ -365,24 +368,51 @@ label.label-email {
     align-items: center;
 }
 
-.subscribe {
+.subscribtion.subscribtion_black {
+    color: #000000;
+}
+
+.subscribtion__header {
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
 }
 
-.subscribe-description {
+.subscribtion__text {
     text-align: center;
     font-size: 22px;
     line-height: 26px;
 }
 
-.email-subscription {
+.subscribtion__form {
     position: relative;
     width: 100%;
 }
 
-.subscribe-action {
+.subscribtion__label {
+    display: none;
+}
+
+.subscribtion__field {
+    width: 100%;
+    height: 60px;
+    background: #F2F2F2;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 219px;
+    box-sizing: border-box;
+    border: 0;
+}
+
+.subscribtion__button {
+    position: absolute;
+    right: 0;
+    width: 200px;
+    height: 60px;
+    background: #83B3D3;
+    border-radius: 0px 10px 10px 0px;
+    color: #FFFFFF;
+    border: 0;
     font-weight: bold;
     font-size: 20px;
     line-height: 26px;
@@ -392,34 +422,8 @@ label.label-email {
     color: #FFFFFF;
 }
 
-.subscribtion-field {
-    width: 600px;
-    height: 60px;
-    background: #F2F2F2;
-    border-radius: 10px 0px 0px 10px;
-    padding-left: 20px;
-    padding-right: 150px;
-    box-sizing: border-box;
-    margin-right: 200px;
-    border: 0;
-}
-
 
 /*****************************конец subscribtion**********************/
-
-
-/******************кнопка ПОДПИСАТЬСЯ**************/
-
-.button-button-subscribe {
-    position: absolute;
-    right: 10px;
-    width: 200px;
-    height: 60px;
-    background: #83B3D3;
-    border-radius: 0px 10px 10px 0px;
-    color: #FFFFFF;
-    border: 0;
-}
 
 
 /*****************************************************/
@@ -520,7 +524,7 @@ li:last-child {
     margin-top: 8px;
 }
 
-.infrastructure-ctalog {
+.infrastructure-catalog {
     display: flex;
 }
 
@@ -562,6 +566,7 @@ li:last-child {
     display: flex;
     flex-direction: column;
     margin-left: 167px;
+    width: 528px;
 }
 
 .price-range {
@@ -615,15 +620,11 @@ li:last-child {
 .section-button-load-more {
     position: absolute;
     width: 620px;
-    height: 60px;
     background: #83B3D3;
     border-radius: 4px;
     left: 50%;
     transform: translate(-50%, 0);
     margin-top: 30px;
-}
-
-.button-load-more {
     font-weight: bold;
     font-size: 20px;
     line-height: 26px;
@@ -631,29 +632,8 @@ li:last-child {
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
-}
-
-.subscribtion-proposal-catalog {
-    width: 1200px;
-    height: 411px;
-    background-color: white;
-}
-
-.subscribtion-proposal-container-catalog {
-    color: black;
-    position: relative;
-    display: flex;
-    margin: 0 auto;
-    width: 800px;
-    height: 224px;
-    text-align: center;
-    padding-top: 94px;
-    padding-right: 200px;
-    padding-left: 200px;
-    padding-bottom: 94px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    border: none;
+    padding: 17px;
 }
 
 .sorting {
@@ -701,7 +681,7 @@ li:last-child {
     justify-content: space-between;
 }
 
-.pagination a {
+.pagination__item {
     width: 55px;
     height: 55px;
     text-decoration: none;
@@ -717,9 +697,41 @@ li:last-child {
     color: #FFFFFF;
 }
 
-.pagination a:nth-child(1) {
+.pagination__item:nth-child(1) {
     background: #F2F2F2;
     color: #000000;
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.line__inputs {
+    display: inline-flex;
+    width: 287px;
+}
+
+.line__range {
+    width: calc(287px /2);
+    height: 48px;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 14px 19px;
+    background: none;
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+
+.line__range:first-child {
+    border-radius: 4px 0px 0px 4px;
+}
+
+.line__range:last-child {
+    border-radius: 0px 4px 4px 0px;
+    border-left: 0;
 }
 
 .button-apply {
@@ -737,6 +749,7 @@ li:last-child {
     text-transform: uppercase;
     color: #FFFFFF;
     text-decoration: none;
+    border: 0;
 }
 
 .button-reset {
@@ -745,9 +758,11 @@ li:last-child {
     text-align: center;
     color: #FFFFFF;
     text-decoration: none;
+    background: none;
+    border: 0;
 }
 
-.pagination-info {
+.pagination__info {
     width: 368px;
     height: 48px;
     margin-right: 0;
@@ -759,7 +774,7 @@ li:last-child {
     margin-left: 299px;
 }
 
-.pages-found-pagination {
+.pagination__text {
     width: 175px;
     height: 23px;
     font-size: 18px;
@@ -770,40 +785,31 @@ li:last-child {
 
 /***********кнопки сортировки************/
 
-.sort-button-active {
+.sort-button {
     width: 48px;
     height: 48px;
-    border: 2px solid #000000;
+    border: 2px solid #E6E6E6;
     box-sizing: border-box;
     border-radius: 4px;
     background: #FFFFFF;
-    background-image: url(../images/logo/mode-tile\ 1.svg);
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.sort-button-active {
+    background-image: url(../images/logo/mode-tile\ 1.svg);
 }
 
 .sort-button-center {
-    width: 48px;
-    height: 48px;
-    border: 2px solid #E6E6E6;
-    box-sizing: border-box;
-    border-radius: 4px;
-    background: #FFFFFF;
     background-image: url(../images/logo/mode-slideshow\ 1.svg);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .sort-button-right {
-    width: 48px;
-    height: 48px;
-    border: 2px solid #E6E6E6;
-    box-sizing: border-box;
-    border-radius: 4px;
-    background: #FFFFFF;
-    background-repeat: no-repeat;
-    background-position: center;
     background-image: url(../images/logo/mode-list\ 1.svg);
+}
+
+.sort-button.active {
+    border-color: black;
 }
 
 .sort-buttons {
@@ -856,7 +862,6 @@ li:last-child {
     text-transform: uppercase;
     text-decoration: none;
     width: 140px;
-    height: 37px;
     padding: 9px 8px 10px;
     border-radius: 4px;
     color: #ffffff;
